@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Formulario Completo</h1>
+      <form id="formulario">
+        <!-- Campo de Texto -->
+        <div class="form-group">
+          <label for="codigo">Código:</label>
+          <input type="text" id="codigo" name="codigo" />
+          <span class="error" id="codigoError"></span>
+        </div>
+        <!-- Campo de Texto -->
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" />
+          <span class="error" id="nombreError"></span>
+        </div>
+        <!-- Campo de Texto -->
+        <div class="form-group">
+          <label for="apellido">Apellido:</label>
+          <input type="text" id="apellido" name="apellido" />
+          <span class="error" id="apellidoError"></span>
+        </div>
+
+        <!-- Campo de Correo Electrónico -->
+        <div class="form-group">
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" />
+          <span class="error" id="emailError"></span>
+        </div>
+
+        <!-- Campo de Lista de Selección -->
+        <div class="form-group">
+          <label for="cargo">Cargo:</label>
+          <select id="cargo" name="cargo">
+            <option value="">Seleccione un cargo</option>
+            <option value="Jefe">Jefe</option>
+            <option value="Analista">Analista</option>
+            <option value="Programador">Programador</option>
+            <option value="Soporte">Soporte</option>
+            <option value="Asistente">Asistente</option>
+          </select>
+          <span class="error" id="ciudadError"></span>
+        </div>
+
+        <button type="submit">Enviar</button>
+      </form>
+      <script src="/js/empleado.js"></script>
+    </div>
+  </body>
+</html>
