@@ -1,46 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulario</title>
     <link rel="stylesheet" href="/css/style.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container_css">
       <h1>Formulario Completo</h1>
       <form id="formulario">
-        <!-- Campo de Texto -->
         <div class="form-group">
-          <label for="codigo">Código:</label>
-          <input type="text" id="codigo" name="codigo" />
-          <span class="error" id="codigoError"></span>
+          <label for="inputCodigo">Código:</label>
+          <input type="text" class="form-control" id="inputCodigo" name="inputCodigo" placeholder="Ingrese un codigo">
+          <div class="invalid-feedback">
+            Debe ingresar un codigo valido alfanumerico y con al menos 2 caracteres.
+          </div>
         </div>
-        <!-- Campo de Texto -->
         <div class="form-group">
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" />
-          <span class="error" id="nombreError"></span>
+          <label for="inputNombre">Nombre:</label>
+          <input type="text" class="form-control" id="inputNombre" name="inputNombre" placeholder="Ingrese su nombre">
+          <div class="invalid-feedback">
+            Debe ingresar un nombre valido.
+          </div>
         </div>
-        <!-- Campo de Texto -->
         <div class="form-group">
-          <label for="apellido">Apellido:</label>
-          <input type="text" id="apellido" name="apellido" />
-          <span class="error" id="apellidoError"></span>
+          <label for="inputApellido">Apellido:</label>
+          <input type="text" class="form-control" id="inputApellido" name="inputApellido" placeholder="Ingrese su apellido">
+          <div class="invalid-feedback">
+            Debe ingresar un apellido valido.
+          </div>
         </div>
-
-        <!-- Campo de Correo Electrónico -->
         <div class="form-group">
-          <label for="email">Correo Electrónico:</label>
-          <input type="email" id="email" name="email" />
-          <span class="error" id="emailError"></span>
+          <label for="inputCorreo">Correo:</label>
+          <input type="text" class="form-control" id="inputCorreo" name="inputCorreo" placeholder="example@gmail.com">
+          <div class="invalid-feedback">
+            Correo Electronico no valido.
+          </div>
         </div>
-
-        <!-- Campo de Lista de Selección -->
         <div class="form-group">
-          <label for="cargo">Cargo:</label>
-          <select id="cargo" name="cargo">
+          <label for="inputCargo">Cargo:</label>
+          <select id="inputCargo" name="inputCargo" class="form-control">
             <option value="">Seleccione un cargo</option>
             <option value="Jefe">Jefe</option>
             <option value="Analista">Analista</option>
@@ -48,12 +51,13 @@
             <option value="Soporte">Soporte</option>
             <option value="Asistente">Asistente</option>
           </select>
-          <span class="error" id="ciudadError"></span>
+          <div class="invalid-feedback">Debe elegir un cargo.</div>
         </div>
 
-        <button type="submit">Enviar</button>
+        <button id="botonEnviar" type="submit">Enviar</button>
       </form>
       <script src="/js/empleado.js"></script>
+      <script src="/js/formulario_validacion.js"></script>
     </div>
   </body>
 </html>

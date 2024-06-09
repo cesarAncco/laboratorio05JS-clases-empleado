@@ -3,15 +3,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
   background-color: #f0f0f0;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-  width: 20px;
-}
-
-.container_css {
+.container {
   background: white;
   padding: 20px;
   border-radius: 8px;
@@ -35,9 +31,7 @@ label {
   margin-bottom: 5px;
 }
 
-input,
-select,
-textarea {
+input {
   width: 100%;
   padding: 10px;
   margin-bottom: 5px;
@@ -45,6 +39,14 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+/* input:invalid {
+  border-color: red;
+}
+
+input:valid {
+  border-color: green;
+} */
 
 .error {
   color: red;
@@ -68,4 +70,8 @@ button:hover {
 
 .error-input {
   border-color: red !important;
+}
+
+.error-label {
+  color: red !important;
 }

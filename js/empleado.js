@@ -57,11 +57,11 @@ $(document).ready(function(){
   $('#formulario').submit(function(e){
     e.preventDefault();
     const empleado = new Empleado();
-    empleado.codigo = $('#codigo').val();
-    empleado.nombre = $('#nombre').val();
-    empleado.apellido = $('#apellido').val();
-    empleado.correo = $('#email').val();
-    empleado.cargo = $('#cargo').val();
+    empleado.codigo = $('#inputCodigo').val();
+    empleado.nombre = $('#inputNombre').val();
+    empleado.apellido = $('#inputApellido').val();
+    empleado.correo = $('#inputCorreo').val();
+    empleado.cargo = $('#inputCargo').val();
 
     console.log(empleado);
     console.log('Sueldo Bruto: ', empleado.sueldoBruto());
